@@ -1,0 +1,69 @@
+$bg-color: rgb(224, 219, 219);
+$black: rgb(0,0,0);
+$color: #e0dbdb;
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+$yellow: #fffb73;
+
+.slider {
+    position: relative;
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+    
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        background: white;
+        height: 40px;
+        width: 40px;
+        z-index: 1;
+        @include center;
+        opacity: .6;
+
+        &--left {
+            left: 5px;
+        }
+
+        &--right { 
+            right: 5px;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 90%;
+
+        & li {
+            background: $yellow;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+
+            &.active {
+                background: red;
+            }
+        }
+    }
+}
