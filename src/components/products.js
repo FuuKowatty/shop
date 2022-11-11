@@ -1,69 +1,95 @@
 export const products = [
     {
         id: 0,
-        name: 'iPhone 14 Pro',
-        price: '$999',
+        name: 'Filicio Jewelry Water',
+        price: '1390',
         sale: false,
-        desc: 'The iPhone 14 Pro ushers in some new ideas from Apple, making it kind of an early adopter special. If it’s time to upgrade and you want all the latest and greatest features, then you’ll need to go Pro.',
+        capacity: [500,800,850],
+        desc: 'FILLICO produces one of the most expensive luxury brands of mineral water in the world and is famous for its extraordinary bottles.The bottle is formed from satined glass. Inlays of gold and Swarovski crystals complete the absolute picture of luxury. As such, Fillico only makes 5,000 bottles per month.',
         img: 'https://duet-cdn.vox-cdn.com/thumbor/0x0:1172x1172/376x376/filters:focal(586x586:587x587):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24059001/226270_iPHONE_14_PHO_akrales_0788_sq.jpg'
     },
     {
         id: 1,
-        name: 'iPhone 14 Pro Max',
-        price: '$1099',
-        desc: 'The 14 Pro Max is the bigger sibling to the 14 Pro, with a large 6.7-inch screen. Otherwise, it shares the same features as the smaller model, including the new Dynamic Island status indicator and a 48-megapixel main camera.',
+        name: 'NEVAS',
+        price: '1180',
+        sale: false,
+        desc: 'NEVAS Water combines the water of two natural springs and thus the best of mineralization and taste. As the first cuvée in the water segment, mixed with fine sparkling carbon dioxide, NEVAS Water not only convinces with its unmistakable taste, but also with the highest quality.',
         img: 'https://duet-cdn.vox-cdn.com/thumbor/0x0:1360x1360/376x376/filters:focal(680x680:681x681):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24059024/226270_iPHONE_14_PHO_akrales_0723_sq.jpg'
     },
     {
         id: 2,
-        name: 'Google Pixel 7 Pro',
-        price: '$899',
-        sale: '$851',
-        desc: 'The Pixel 7 Pro includes a reliably good camera system, great daily performance, and a few clever extras thanks to Google’s custom chipset. Best of all, it costs a little less than the average top-tier flagship.',
+        name: 'Bling H2O',
+        price: '219',
+        sale: false,
+        desc: 'BLING H20/English Mountain is virtually nitrate-free, sodium-free, and contains minimal chlorides. The 100 milligrams per liter of Bicarbonate account for the pH of 7.66, an optimal pH level for those who appreciate a slightly sweet taste. Country of Origin: U.S.A.',
         img: 'https://duet-cdn.vox-cdn.com/thumbor/0x0:2040x1360/376x376/filters:focal(1020x680:1021x681):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24100076/226337_Pixel_7_and_7_Pro_AKrales_0410.jpg'
     },
     {
         id: 3,
-        name: 'Apple iPhone 13',
-        price: '$999',
-        desc: "Each of the four iPhone 13 models run Apple's latest iOS, which is currently iOS 15.5, and will work with iOS 16. They also feature camera upgrades, more storage, an A15 Bionic processor and some design tweaks that make them stand apart from 2020's iPhone 12.",
+        name: 'Svalbarði ',
+        price: '185',
+        sale: false,
+        desc: 'Gathered and bottled in the arctic outpost of Longyearbyen, Svalbarði iceberg water is an exclusive fine water. With no nitrates or pollutants the ultra low-minerality makes for a light mouthfeel, with a slight bite and sweetness. Svalbarði is an experience for the palate, much like a fine wine.',
         img: 'https://idream.pl/images/detailed/61/iPhone_13_pink_h3om-it.png'
     },
     {
         id: 4,
-        name: 'Samsung Galaxy S22 Ultra',
-        price: '$840',
-        desc: 'The “Ultra” moniker in Samsung’s Galaxy lineup no longer means you’re just getting the biggest phone; now, it means you’re getting the biggest phone and everything but the kitchen sink. ',
+        name: 'Ô Amazon',
+        price: '110',
+        sale: false,
+        desc: 'Ô Amazon Air Water was born  of the constant search  sustainable solutions for  the development of our  Planet by development of a technology that could condense water from the air for a suitable for consumption. ',
         img: ''
     },
     {
-        id: 0,
-        name: 'iPhone 14 Pro',
-        price: '$999',
-        desc: '',
+        id: 5,
+        name: 'Uisge Source',
+        price: '94',
+        sale: false,
+        desc: 'A hard spring water with high mineral content to bring out the best in whiskies from the Highland region. Naturally filtered through brittle rock such as red sandstone and limestone. Sourced from St Colman'+'s Well in Ross-shire, located close to some of the popular Highland Distilleries.',
         img: ''
     },
     {
-        id: 0,
-        name: 'iPhone 14 Pro',
-        price: '$999',
-        desc: '',
+        id: 6,
+        name: 'ROI',
+        price: '59',
+        sale: false,
+        desc: 'ROI water is unlike any other mineral water in the world. As the most magnesium-rich water there is, it offers various benefits, but only when enjoyed in moderation. The unique ROI mineral water provides various health effects, depending on the way it is drunk. Drink ROI fast and warm to accelerate bowel activity.',
         img: ''
     },
     {
-        id: 0,
-        name: 'iPhone 14 Pro',
-        price: '$999',
-        desc: '',
+        id: 7,
+        name: 'MINUS 181',
+        price: '50',
+        sale: false,
+        desc: 'MINUS 181 - German Artesian Water. The clear, pure water of MINUS 181 rests at a depth of 181 meters. It gives a feeling of calm and balance in hectic everyday life and offers a very personal moment of silence. It is a first-class mineral water for connoisseurs and connoisseurs.',
         img: ''
     },
     {
-        id: 0,
-        name: 'iPhone 14 Pro',
-        price: '$999',
-        desc: '',
+        id: 8,
+        name: 'Berg',
+        price: '46',
+        sale: false,
+        desc: 'It is an all-natural, truly virginal water with no traces of minerals. Its unmistakable taste is clean, light and pure. Berg Water comes from Icebergs, a Unique Source: Our geography gives us a unique opportunity to access to this natural resource.',
         img: ''
     },
+    {
+        id: 9,
+        name: 'VOSS',
+        price: '33',
+        sale: false,
+        desc: 'VOSS premium water is bottled at an artesian source in the pristine wilderness of Southern Norway. VOSS is shielded from pollutants for centuries under layers of ice and rock. This pristine aquifer produces a naturally pure water, free of sodium, low in minerals and incomparable in taste.',
+        img: ''
+    },
+    {
+        id: 10,
+        name: 'BLVD',
+        price: '27',
+        sale: false,
+        desc: 'Made from plastic material, the BLVD 20 L Two-piece Water Can Set body is rust-free, tough, and durable. So, you can roughly handle them without worrying about damage. Boasting a leakproof design, these water cans let you store water without the fear of leakage. So, you won'+'t find a wet mess around them due to leakage.',
+        img: ''
+    },
+
+    
     
 ]
 
