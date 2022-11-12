@@ -10,3 +10,4 @@ export default function render(arr) {
         new Product(e.img, e.name, e.desc, e.price)
 })
 }
+

@@ -9,6 +9,7 @@ export class Product {
         this.desc = desc;
         this.price = price;
         this.createElements();
+        this.setEvents();
     }
 
     apppendElement = (prod) => {
@@ -26,20 +27,21 @@ export class Product {
             <img class="products__img" src="${this.src}" alt="${this.name} photo">
             <div class="products__name">${this.name}</div> 
             <div class="products__desc">${this.desc}</div>
-            <div class="products__price">${this.price}</div>
-            <button class="products__button">Dodaj do koszyka</button>
+            <div class="products__itemsWrapper">
+                <div class="products__price">${this.price}$/liter</div>
+                <button class="products__button">Dodaj do koszyka</button>
+            </div>
         `;
         this.apppendElement(prod);
     }
-}
 
-{/* <div class="products__product">
-<img src="https://placeimg.com/150/200/sepia" alt="">
-<div class="products__name">Product Name</div> 
-<div class="products__desc">
-'NEVAS Water combines the water of two natural springs and thus the best of mineralization and taste. As the first cuvée in the water segment, mixed with fine sparkling carbon dioxide, NEVAS Water not only convinces with its unmistakable taste, but also with the highest quality.',
-</div>
-<div class="products__price">999</div>
-<button class="products__button">Dodaj do koszyka</button>
-</div> */}
+
+    setEvents() {
+            const btn = [...document.querySelectorAll('.products__button')].pop();
+            btn.addEventListener('click', () => {
+                
+            })
+            
+    }
+}
 

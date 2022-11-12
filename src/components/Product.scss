@@ -15,7 +15,6 @@ $yellow: #fffb73;
         font-size: 48px;
         color: $black;
         text-align: center;
-        margin: 25px 0;
 
     }
 
@@ -30,7 +29,6 @@ $yellow: #fffb73;
 
     &__product {
         padding: 10px;
-        border: 1px solid black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -43,7 +41,10 @@ $yellow: #fffb73;
     }
 
     &__desc {
-        font-size: 16px;
+        font-size: 12px;
+        width: 90%;
+        text-align: justify;
+
     }
 
     &__name {
@@ -51,12 +52,23 @@ $yellow: #fffb73;
     }
 
     &__button {
-        padding: 10px;
+        padding: 10px 20px;
+        background: yellow;
+        border-radius: 10px;
+        border: 1px solid black;
+        cursor: pointer;
     }
 
     &__price {
         margin:10px 0;
         font-size: 24px;
         color: red;
+        font-weight: bold
+    }
+
+    &__itemsWrapper {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: 10px;
     }
 }

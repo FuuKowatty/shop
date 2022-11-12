@@ -10,7 +10,8 @@ export default class Categories {
     constructor(tag) {
         this.tag = tag;
         this.categoriesList = categoriesList;
-        this.createCategoryBar()
+        this.createCategoryBar();
+        this.lastClickedBtn;
     }
 
     createCategoryBar = () => {
@@ -19,6 +20,7 @@ export default class Categories {
         this.categoriesList.forEach(e => {
             const li = document.createElement('li');
             const btn = this.createButton(e);
+            btn.classList.add('categories__button');
             li.append(btn);
             categoriesContainer.append(li);
         })
@@ -35,12 +37,28 @@ export default class Categories {
 
     setEvent = (btn) => {
         btn.addEventListener('click', () => {
-            if(btn.textContent === 'SALE') {
+            if(btn.classList.contains('active')) {
+                render([...products])
+            }
+            else if(btn.textContent === 'SALE') {
                 render([...products].filter(e => e.sale));
             } else {
                 render([...products].filter(e => e.name === btn.textContent));
             }
+            this.manageActiveButton(btn);
+            this.lastClickedBtn = btn;
         })
+    }
+
+    manageActiveButton = (btn) => {
+        if(this.lastClickedBtn === btn  && btn.classList.contains('active')) {
+           btn.classList.remove('active');
+           return
+        } 
+        document.querySelectorAll('.categories__button')
+        .forEach(e => e.classList.remove('active'));
+        btn.classList.add('active');
+        
     }
 }
 

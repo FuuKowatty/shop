@@ -15,13 +15,31 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
-                    {
-                        loader: 'file-loader',
-                    }
+                  'file-loader',
+                  {
+                    loader: 'image-webpack-loader',
+                    options: {
+                      bypassOnDebug: true, // webpack@1.x
+                      disable: true, // webpack@2.x and newer
+                      options: {
+                        mozjpeg: {
+                          progressive: true,
+                        },
+                        pngquant: {
+                          quality: [0.65, 0.90],
+                          speed: 4
+                        },
+                        // the webp option will enable WEBP
+                        webp: {
+                          quality: 75
+                        }
+                      }
+                    },
+                  },
                 ],
-            },
+            }
         ]
     }
 }
