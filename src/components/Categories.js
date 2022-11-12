@@ -1,8 +1,10 @@
 import './Categories.scss';
 import { products } from './products';
+import render from '../renderProducts';
+
 
 const categoriesList = products.map(e => e.name);
-categoriesList.push('SALE')
+categoriesList.push('SALE');
 
 export default class Categories {
     constructor(tag) {
@@ -14,15 +16,32 @@ export default class Categories {
     createCategoryBar = () => {
         const categoriesContainer = document.createElement('ul');
         categoriesContainer.classList.add('categories__list')
-        this.categoriesList.forEach((e, i) => {
+        this.categoriesList.forEach(e => {
             const li = document.createElement('li');
-            li.textContent = e;
+            const btn = this.createButton(e);
+            li.append(btn);
             categoriesContainer.append(li);
         })
         this.tag.append(categoriesContainer);
     }
 
+    createButton = (text) => {
+        const btn = document.createElement('button');
+        btn.textContent = text;
+        this.setEvent(btn);
+        return btn
+       
+    }
 
+    setEvent = (btn) => {
+        btn.addEventListener('click', () => {
+            if(btn.textContent === 'SALE') {
+                render([...products].filter(e => e.sale));
+            } else {
+                render([...products].filter(e => e.name === btn.textContent));
+            }
+        })
+    }
 }
 
 
