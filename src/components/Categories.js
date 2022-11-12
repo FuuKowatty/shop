@@ -1,16 +1,8 @@
 import './Categories.scss';
+import { products } from './products';
 
-const categoriesList = [
-    'kat1',
-    'kat2',
-    'kat3',
-    'kat4',
-    'kat5',
-    'kat6',
-    'kat7',
-    'kat8',
-    'kat9'
-];
+const categoriesList = products.map(e => e.name);
+categoriesList.push('SALE')
 
 export default class Categories {
     constructor(tag) {
@@ -47,4 +39,3 @@ export default class Categories {
         //     <li class="categories__listElement">kat8</li>
         //     <li class="categories__listElement">kat9</li>
         // </ul>
-

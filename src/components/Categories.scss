@@ -16,16 +16,15 @@ $yellow: #fffb73;
         margin: 20px 0;
         width: 80%;
         display: grid;
-        grid-template-columns: repeat(3, minmax(200px, 1fr));
-        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 20px 0;
         place-items: center;
         list-style-type: none;
 
         & li {            
             @include center();
-            width: 80%;
+            width: 90%;
             height: 50px;
-            gap: 10px;
             background: $color;
             color: $black;
             border-radius: 10px;

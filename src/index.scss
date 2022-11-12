@@ -1,4 +1,4 @@
-$bg-color: rgb(224, 219, 219);
+$bg-color: white;
 $black: rgb(0,0,0);
 $color: #e0dbdb;
 
@@ -16,7 +16,7 @@ $color: #e0dbdb;
 
 body {
     background: $bg-color;
-    color: $color;
+    color: $black;
 }
     
 .menu {
@@ -72,10 +72,15 @@ body {
     }
 }
 
-
-
 footer {
     background: $black;
+    padding: 25px 10px;
+    text-align: right;
+
+    & a {
+        text-decoration: none;
+        color: $color;
+    }
 }
 
 
