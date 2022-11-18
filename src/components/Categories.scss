@@ -1,12 +1,4 @@
-$bg-color: rgb(224, 219, 219);
-$black: rgb(0,0,0);
-$color: white;
-@mixin center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-};
-$yellow: #fffb73;
+@import '../globalVariables.scss';
 
 .categories {
     background: black;

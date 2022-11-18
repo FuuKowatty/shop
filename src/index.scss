@@ -1,12 +1,4 @@
-$bg-color: white;
-$black: rgb(0,0,0);
-$color: #e0dbdb;
-
-@mixin center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-};
+@import './globalVariables.scss';
 
 * {
     margin: 0;

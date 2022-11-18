@@ -1,0 +1,10 @@
+$bg-color: white;
+$black: rgb(0,0,0);
+$color: #e0dbdb;
+$yellow: #fde066;
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};

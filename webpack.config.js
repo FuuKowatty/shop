@@ -6,14 +6,22 @@ module.exports = {
 
     module: {
         rules: [
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader",
-                ]
-            },
+          {
+            test: /\.s[ac]ss$/i,
+            use: [
+              "style-loader",
+              "css-loader",
+              {
+                loader: "sass-loader",
+                options: {
+                  sassOptions: {
+                    indentWidth: 4,
+                    includePaths: [__dirname + "src/index.scss", "absolute/path/b"],
+                  },
+                },
+              },
+            ],
+          },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
