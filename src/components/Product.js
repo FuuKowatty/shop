@@ -1,4 +1,7 @@
 import './Product.scss';
+import { actuallOrder } from './Order';
+import { Menu__ShopingCart } from '..';
+
 
 export class Product {
 
@@ -11,6 +14,9 @@ export class Product {
         this.createElements();
         this.setEvents();
     }
+
+    getPrice = () => +this.price;
+    getName = () => this.name;
 
     apppendElement = (prod) => {
         this.tag.append(prod)
@@ -39,7 +45,10 @@ export class Product {
     setEvents() {
             const btn = [...document.querySelectorAll('.products__button')].pop();
             btn.addEventListener('click', () => {
-                
+                actuallOrder.addProduct(this);
+                Menu__ShopingCart.renderElements();
+                Menu__ShopingCart.togglePopScreenBtns();
+
             })
             
     }

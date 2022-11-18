@@ -39,37 +39,26 @@ body {
         color: $color;
         border: 2px solid lighten($black, 10%);
         padding: 10px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-radius: 10px;
 
         &:focus {
             outline: none;
         }
     }
 
-    &__button {
-        padding: 10px;
-        background: $color;
-        border: 2px solid lighten($black, 10%);
-        border-left: none;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
+    // &__button {
+    //     padding: 10px;
+    //     background: $color;
+    //     border: 2px solid lighten($black, 10%);
+    //     border-left: none;
+    //     border-bottom-right-radius: 10px;
+    //     border-top-right-radius: 10px;
         
-        &:hover {
-            background: darken($color, 10%);
-        }
-    }
+    //     &:hover {
+    //         background: darken($color, 10%);
+    //     }
+    // }
 
-    &__basket {
-        @include center;
-        
-        & button {
-            font-size: 24px;
-            color: $color;
-            border: none;
-            background: none;
-        }
-    }
 }
 
 footer {

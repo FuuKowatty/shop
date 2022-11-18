@@ -10,7 +10,7 @@ import Berg from '../../public/assets/images/Berg.jpg';
 import VOSS from '../../public/assets/images/VOSS.png';
 import BLVD from '../../public/assets/images/BLVD.jpg';
 
-export const products = [
+let products = [
     {
         id: 0,
         name: 'Filicio Jewelry Water',
@@ -115,3 +115,4 @@ export const products = [
     
 ]
 
+export default products.sort((a,b) => a.name > b.name);

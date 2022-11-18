@@ -1,5 +1,5 @@
 import './Categories.scss';
-import { products } from './products';
+import products from './products';
 import render from '../renderProducts';
 
 

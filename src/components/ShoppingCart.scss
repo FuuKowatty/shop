@@ -1,0 +1,94 @@
+$bg-color: white;
+$black: rgb(0,0,0);
+$color: #e0dbdb;
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+
+.menu {
+    position: relative;
+
+.menu__basket {
+
+        @include center;
+        
+        & button {
+            display: block;
+            font-size: 24px;
+            color: $color;
+            border: none;
+            background: none;
+            padding: 0;
+
+            // &.active {
+            //     position: absolute;
+            //     bottom: 0px;
+            //     right: 0;
+            //     border: 1px solid $black;
+            //     background: $bg-color;
+            //     width: 200px;
+            //     height: 300px;
+            // }
+        }
+    }
+}
+
+.popScreen {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    right: 0;
+    width: 250px;
+    height: 500px;
+    border: 1px solid $black;
+    background: $bg-color;
+    border-top: none;
+    z-index: 2;
+    overflow-y: scroll;
+
+    &__item {
+        display: flex;
+        border-bottom: 1px dotted gray;
+        margin: 5px;
+        padding: 5px 10px;
+    }
+    
+    &__item--rightSide {
+        width: 100%;
+        text-align: center;
+        color: red;
+    }
+
+    &__basketBtnContainer {
+        @include center();
+    }
+
+    &__confirmBtn {
+        display: none;
+        padding: 10px;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 10px;
+
+        
+    }
+
+    &__resetBtn {
+        display: none;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 10px;
+        background: white;
+    }
+}
+
+
+
+.active {
+    display: block;
+}
