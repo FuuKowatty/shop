@@ -1,6 +1,7 @@
 @import '../globalVariables.scss';
 
 .products {
+    width: 1600px;
     @include center();
     flex-direction: column;
     &__header {
@@ -99,5 +100,9 @@
         text-align: center;
         margin-top: auto;
         margin-bottom: 10px;
+    }
+
+    @include mq(large) {
+        width: 1000px;
     }
 }
