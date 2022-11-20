@@ -105,4 +105,8 @@
     @include mq(large) {
         width: 1000px;
     }
+
+    @include mq(medium) {
+        width: 100%;
+    }
 }
