@@ -3,7 +3,7 @@
 .categories {
     width: 30%;
     order: -1;
-    background: black;
+    background: $bg-color;
     @include center();
 
     &__list {
@@ -12,10 +12,10 @@
         place-items: center;
         list-style-type: none;
 
-        & li {            
-            @include center();
+        & li {
+            @include center;
+            height: 40px;          
             width: 90%;
-            height: 50px;
             z-index: 0;
 
 
@@ -29,7 +29,7 @@
                 cursor: pointer;
 
                 &.active {
-                    border: 3px solid violet;
+                    border: 2px solid $blue;
                 }
             }
         }

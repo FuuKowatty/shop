@@ -115,4 +115,4 @@ let products = [
     
 ]
 
-export default products.sort((a,b) => a.name > b.name);
+export default [...products];

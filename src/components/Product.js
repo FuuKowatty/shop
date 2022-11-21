@@ -35,7 +35,7 @@ export class Product {
             <div class="products__desc">${this.desc}</div>
             <div class="products__itemsWrapper">
                 <div class="products__price">${this.price}$/liter</div>
-                <button class="products__button">Dodaj do koszyka</button>
+                <button class="products__button">Add to Basket</button>
             </div>
         `;
         this.apppendElement(prod);

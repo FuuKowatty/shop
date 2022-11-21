@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 $bg-color: white;
 $black: rgb(0,0,0);
 $color: white;
 $yellow: #fde066;
+$blue: #00a2e8;
 
 @mixin center {
     display: flex;
@@ -13,7 +15,7 @@ $yellow: #fde066;
 $breakpoints: (
     mobile: '(max-width: 768px)',
     medium: '(max-width: 1024px)',
-    large: '(min-width: 1025px) and (max-width: 1600px)',
+    large: '(min-width: 1025px) and (max-width: 1500px)',
 );
 
 @mixin mq($breakpoint) { //media queries
@@ -26,4 +28,8 @@ $breakpoints: (
     @else {
         @error '"#{$breakpoint}" - This resolution doesnt match to anything';
     }
+}
+
+.active {
+    display: block;
 }

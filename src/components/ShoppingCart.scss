@@ -1,32 +1,7 @@
 @import '../globalVariables.scss';
 
-.menu {
-    position: relative;
 
-.menu__basket {
 
-        @include center;
-        
-        & button {
-            display: block;
-            font-size: 24px;
-            color: $color;
-            border: none;
-            background: none;
-            padding: 0;
-
-            // &.active {
-            //     position: absolute;
-            //     bottom: 0px;
-            //     right: 0;
-            //     border: 1px solid $black;
-            //     background: $bg-color;
-            //     width: 200px;
-            //     height: 300px;
-            // }
-        }
-    }
-}
 
 .popScreen {
     display: none;
@@ -79,8 +54,3 @@
     }
 }
 
-
-
-.active {
-    display: block;
-}
