@@ -1,9 +1,28 @@
 @import '../globalVariables.scss';
 
+@keyframes slideIn {
+    0% {
+        opacity: .2;
+        transform: translateX(50%);
+    }
+
+    50% {
+        opacity: .6;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
 .slider {
     position: relative;
 
     &__img {
+        animation: slideIn 1s ease-in-out;
         width: 100%;
         display: block;
     }

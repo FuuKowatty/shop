@@ -1,5 +1,5 @@
 import render from "./renderProducts";
-import products from "./components/products";
+// import products from "./components/products";
 // const input = document.querySelector('.menu__input');
 
 const searchEngine = {
@@ -13,7 +13,7 @@ const searchEngine = {
         })
     },
 
-    filterProducts: function() {
+    filterProducts: function(products) {
         this.input.addEventListener("keyup", () => {
                 const inputValue = this.input.value.toLowerCase();
                 const arr = products.filter(e => e.name.toLowerCase().includes(inputValue));
@@ -24,7 +24,7 @@ const searchEngine = {
 };
 
 searchEngine.scrollDoc();
-searchEngine.filterProducts();
+// searchEngine.filterProducts();
 
 export default searchEngine;
 

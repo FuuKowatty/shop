@@ -1,20 +1,25 @@
 import './Categories.scss';
-import products from './products';
+// import products from './products';
 import render from '../renderProducts';
 
 
-const categoriesList = products.map(e => e.name);
-categoriesList.push('SALE');
+// const categoriesList = products.map(e => e.name).concat(['SALE']);
 
-export default class Categories {
+class Categories {
     constructor(tag) {
         this.tag = tag;
-        this.categoriesList = categoriesList;
-        this.createCategoryBar();
+        this.categoriesList;
+        // this.createCategoryBar();
+        this.products;
         this.lastClickedBtn;
     }
 
-    createCategoryBar = () => {
+    getCategoriesNames = (products) => {
+        this.categoriesList = products.map(e => e.name).concat(['SALE']);
+    }
+
+    createCategoryBar = (products) => {
+        this.products = products;
         const categoriesContainer = document.createElement('ul');
         categoriesContainer.classList.add('categories__list')
         this.categoriesList.forEach(e => {
@@ -38,12 +43,12 @@ export default class Categories {
     setEvent = (btn) => {
         btn.addEventListener('click', () => {
             if(btn.classList.contains('active')) {
-                render([...products])
+                render(this.products)
             }
             else if(btn.textContent === 'SALE') {
-                render([...products].filter(e => e.sale));
+                render(this.products.filter(e => e.sale !== "FALSE" ));
             } else {
-                render([...products].filter(e => e.name === btn.textContent));
+                render(this.products.filter(e => e.name === btn.textContent));
             }
             this.manageActiveButton(btn);
             this.lastClickedBtn = btn;
@@ -62,7 +67,8 @@ export default class Categories {
     }
 }
 
-
+const categories = new Categories(document.querySelector('.categories'));
+export default categories;
 
 
         // <ul class="categories__list">
