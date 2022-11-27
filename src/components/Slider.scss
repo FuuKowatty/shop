@@ -17,12 +17,15 @@
 }
 
 
+.loadAnimation {
+    animation: slideIn 1s ease-in-out;
+}
+
 
 .slider {
     position: relative;
 
     &__img {
-        animation: slideIn 1s ease-in-out;
         width: 100%;
         display: block;
     }

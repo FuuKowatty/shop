@@ -1,5 +1,6 @@
 import './ShoppingCart.scss';
 import { actuallOrder } from './Order';
+import Popup from './Popup';
 
 export default class ShoppingCart {
     constructor(tag) {
@@ -38,11 +39,13 @@ export default class ShoppingCart {
 
     setEvents = (btn) => {
         if(Array.isArray(btn)) {
+
             const [confBtn, resetBtn] = btn;
             resetBtn.addEventListener('click', () => {
-                actuallOrder.products = [];
-                document.querySelector('.addedElementsList').innerHTML = '';
-                this.togglePopScreenBtns();
+                new Popup('waring', 'Are you sure? <br> It would delete all your chosen products');
+            })
+            confBtn.addEventListener('click', () => {
+                new Popup('info', 'ORDER PLACED! <br> thank you for shopping in our store');
             })
 
         }
@@ -51,6 +54,14 @@ export default class ShoppingCart {
                 this.togglePopScreen(btn);
             })
         }
+
+    }
+
+    
+    clearBusket = () => {
+        actuallOrder.products = [];
+        document.querySelector('.addedElementsList').innerHTML = '';
+        this.togglePopScreenBtns();
     }
 
     togglePopScreen = (btn) => {

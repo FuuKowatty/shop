@@ -23,7 +23,7 @@ export default class Slider {
     setDisplay = () => {
         this.tag.classList.add('slider')
         this.tag.innerHTML = `
-            <img class="slider__img" src="" alt="slider photo">
+            <img class="slider__img loadAnimation" src="" alt="slider photo">
             <button class="slider__button slider__button--left"><</button>
             <button class="slider__button slider__button--right">></button>
         `;
@@ -77,10 +77,11 @@ export default class Slider {
         }
         this.setActiveSliderImg();
         this.setActiveSliderList();
+
     }
 
     setActiveSliderImg = () => {
-        this.img[this.img.length-1].src = productsSlider[this.currentIndex];
+            this.img[this.img.length-1].src = productsSlider[this.currentIndex];  
     }
 
     setActiveSliderList = () => {

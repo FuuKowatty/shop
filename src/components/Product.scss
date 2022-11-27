@@ -7,19 +7,13 @@
         transform: translateY(25%);
     }
 
-    50% {
-        opacity: .3;
-    }
-
-    90% {
-        opacity: .6;
-    }
-
     100% {
         opacity: 1;
         transform: translateY(0%);
     }
 }
+
+
 
 .products {
     width: 1500px;

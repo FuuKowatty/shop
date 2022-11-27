@@ -1,6 +1,7 @@
 @import '../globalVariables.scss';
 
 .categories {
+    z-index: 1;
     width: 25%;
     order: -1;
     background: $bg-color;

@@ -39,6 +39,7 @@ export class Product {
             </div>
         `;
         this.apppendElement(prod);
+        
     }
 
 
