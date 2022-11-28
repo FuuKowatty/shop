@@ -6,13 +6,13 @@
     box-sizing: border-box;
 }
 
+
 body {
     background: $bg-color;
     color: $black;
     display: grid;
     place-items: center;
     font-family: 'Rubik', sans-serif;
-    filter: brightness(0.5);
 }
 
     
@@ -22,16 +22,20 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-
+    
 }
 
+
+
 .infoBoard {
+
     @include center;
     justify-content: space-around;
     flex-direction: column;
     z-index: 999;
     border: 1px solid $black;
     background: $bg-color;
+    box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .7);
     width: 500px;
     height: 250px;
     border-radius: 30px;

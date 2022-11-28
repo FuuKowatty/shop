@@ -9,9 +9,7 @@ import MINUS_181 from '../../public/assets/images/Minus_181.jpg';
 import Berg from '../../public/assets/images/Berg.jpg';
 import VOSS from '../../public/assets/images/VOSS.png';
 import BLVD from '../../public/assets/images/BLVD.jpg';
-import categories from './Categories';
-import renderProduct from '../renderProducts.js';
-import searchEngine from "../searchEngine";
+
 
 let products = [
     {

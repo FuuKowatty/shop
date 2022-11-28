@@ -46,7 +46,7 @@ class Categories {
                 render(this.products)
             }
             else if(btn.textContent === 'SALE') {
-                render(this.products.filter(e => e.sale !== "FALSE" ));
+                render(this.products.filter(e => e.sale )); //e.sale !== "FALSE" for API
             } else {
                 render(this.products.filter(e => e.name === btn.textContent));
             }

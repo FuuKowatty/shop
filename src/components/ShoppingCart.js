@@ -6,6 +6,8 @@ export default class ShoppingCart {
     constructor(tag) {
         this.tag = tag;
         this.renderBusket();
+        this.btnContainer = this.addedElementsList('popScreen__basketBtnContainer');
+        this.totalPriceContainer = this.addedElementsList('totalPriceElement', 'span');
         this.createPopScreen();
         this.popScreen = document.querySelector('.popScreen');
         this.renderBtns();
@@ -15,18 +17,26 @@ export default class ShoppingCart {
     createPopScreen = () => {
         const popScreen = document.createElement('div');
         popScreen.classList.add('popScreen');
-        popScreen.append(this.addedElementsList('addedElementsList') );
-        popScreen.append(this.addedElementsList('popScreen__basketBtnContainer'));
+        this.createPopScreenContainer(popScreen);
         document.querySelector('.menu').append(popScreen);
 
     }
 
-    addedElementsList(cl) {
-        const div = document.createElement('div');
+    createPopScreenContainer = (popScreen) => {
+        const itemContainer = this.addedElementsList('itemContainer');
+        itemContainer.append(this.addedElementsList('addedElementsList') );
+        itemContainer.append(this.totalPriceContainer);
+        itemContainer.append(this.btnContainer);
+        popScreen.append(itemContainer);
+    }
+
+    addedElementsList(cl, el='div') {
+        const div = document.createElement(el);
         div.classList.add(cl);
 
         return div
     }
+
 
     renderBusket = () => {
         const btn = document.createElement('button');
@@ -68,20 +78,20 @@ export default class ShoppingCart {
         this.popScreen.classList.toggle('active');
     }
 
-    togglePopScreenBtns()  {
-        const [confirmBtn, resetBtn] = this.basketBtns;
-
+    togglePopScreenBtns() {
         if(document.querySelector('.addedElementsList').innerHTML === '') {
-            confirmBtn.classList.remove('active');
-            resetBtn.classList.remove('active');
+            this.btnContainer.classList.remove('active');
+            this.totalPriceContainer.classList.remove('active');
+
         } else {
-            confirmBtn.classList.add('active');
-            resetBtn.classList.add('active');
+            this.btnContainer.classList.add('active');
+            this.totalPriceContainer.classList.add('active');
         }
     }
 
     renderElements = () => {
         document.querySelector('.addedElementsList').innerHTML = '';
+        this.totalPriceContainer.innerHTML = actuallOrder.getTotal();
         actuallOrder.products
             .forEach(e => {
                 this.generateElement(e)
@@ -97,6 +107,7 @@ export default class ShoppingCart {
         this.setEvents([confBtn, resetBtn]);
 
         this.basketBtns = [confBtn, resetBtn];
+        this.btnContainer.append(confBtn, resetBtn);
         document.querySelector('.popScreen__basketBtnContainer').append(confBtn, resetBtn);
     }
 

@@ -7,6 +7,7 @@ export default class Popup {
         this.height = height;
         this.width = width;
         this.board;
+        this.popup;
         this.createBoard();
         this.createPopup();
 
@@ -16,6 +17,7 @@ export default class Popup {
         const div = document.createElement('div');
         div.classList.add('popup');
         div.style.height = document.documentElement.offsetHeight + 'px';
+        this.popup = div;
         div.append(this.board);
         document.body.append(div);
 
@@ -24,7 +26,6 @@ export default class Popup {
     createBoard = () => {
         const div = document.createElement('div');
         div.classList.add('infoBoard');
-        // div.classList.add(`width: ${this.width}, 'height: ${this.height}`);
         this.board = div;
         const btn = this.createBtn();
         this.addContent(btn)
@@ -63,6 +64,7 @@ export default class Popup {
 
     setEventBtn = (e) => {
         this.board.remove();
+        this.popup.remove();
         if(e.textContent === 'OK') {
             Menu__ShopingCart.clearBusket();
         }
